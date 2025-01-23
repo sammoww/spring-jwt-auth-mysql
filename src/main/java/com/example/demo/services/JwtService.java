@@ -35,7 +35,7 @@ public class JwtService {
         return claimsResolver.apply(claims);
     }
 
-    //the two methods below: what their use and why the first return HashMapsb and named generateToken.
+    //the two methods below: what their use and why the first return HashMap and named generateToken.
     public String generateToken(UserDetails userDetails){
         return generateToken(new HashMap<>(),userDetails);
     }

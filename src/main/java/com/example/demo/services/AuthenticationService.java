@@ -30,7 +30,6 @@ public class AuthenticationService {
     }
 
     public User authenticate(LoginUserDto input){
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(input.getEmail(),input.getPassword()));
         return userRepository.findByEmail(input.getEmail()).orElseThrow(()->new UsernameNotFoundException("Email not found!"));
     }
 }
